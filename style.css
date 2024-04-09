@@ -1,14 +1,3 @@
-/* 
-Título do seu site;
-Menu Principal;
-Seção Sobre Mim;
-Seção Hobbies e Soft Skills;
-Seção Formações + Cursos;
-Seção Experiência em programação;
-Formulário de Contato;
-Rodapé.
- */
-
 /*CSS Reset / Normalize*/
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
@@ -18,6 +7,10 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --cor-de-fundo-destacado: #EAF2FD;
+   --branco: white;
+   --cor-destaque: #2A7AE4;
+   --cor-destaque-desbotada: #5595E9;
 }
 
 body {
@@ -28,60 +21,283 @@ body {
     padding: 0;
     line-height: 1;
 }
+
 ol, ul,li {
     list-style: none;
 }
+
 a{
     text-decoration: none;
     color: var(--cor-de-link);
 }
 
-/*Sessão Menu*/
-
-section.menu{
-
+.btn--destaque{
+    color: var(--brancoo);
+    background-color: var(--cor-destaque);
+    height: 51px;
+    width: auto;
+    padding: 12px 16px;
+    border: none;
+    color: var(--branco);
+    font-size: 16px;
 }
 
-/*Sessão Title*/
+.btn--borda{
+    color: var(--brancoo);
+    background-color: var(--branco);
+    height: 51px;
+    width: auto;
+    padding: 12px 16px;
+    border: none;
+    color: var(--cor-destaque);
+    border: solid 1px var(--cor-destaque);
+    font-size: 16px;
+}
+
+/*Sessão Menu
+Título do seu site;*/
+section.menu{
+    box-sizing: border-box;
+    max-width: 1136px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+/* estrelas e fulana de tal */
+.menu header{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+/* links do menu */
+.menu__list{
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    align-items: center;
+}
+/*Sessão Title
+Menu Principal;*/
 
 section.title{
-
+    box-sizing: border-box;
+    max-width: 1136px;
+    padding: 20px 20px;
+    margin: 0 auto;
 }
 
-/*Sessão About*/
+.title__div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Olá, meu nome é... */
+.title__container{
+    display: flex;
+    flex-direction: column;
+}
+/* links redes sociais */
+.title__network{
+    display: flex;
+    gap: 20px;
+    padding: 0
+}
 
+/*Sessão About
+Seção Sobre Mim;*/
 section.about{
-
+    background-color: var(--cor-de-fundo-destacado);
+    background-size: cover;
 }
 
-/*Sessão Hobbies*/
-
-section.hobbies{
-    
+.about__container{
+    box-sizing: border-box;
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1136px;
+    box-sizing: border-box;
 }
 
-/* Experiência Acadêmica*/
+.about__paragraph{
+    max-width: 751px;
+}
+/*Sessão Hobbies
+Seção Hobbies e Soft Skills*/
+section.hobbies, section.skills{
+    box-sizing: border-box;
+    max-width: 1136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin: 0 auto;
+    gap:32px;
+    margin-bottom: 50px
+}
 
+.skills__title,
+.hobbies__title{
+    text-align: center;
+}
+
+.skills__line,
+.hobbies__line{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.skills__box,
+.hobbies__box{
+    width: 176px;
+    height: 174px;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills__box ul,
+.hobbies__box ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Experiência Acadêmica
+Seção Formações + Cursos;*/
 section.academic{
-
+    background-color: var(--cor-de-fundo-destacado);
+    background-size: cover;
 }
 
-/* experiência*/
+.academic__container{
+    box-sizing: border-box;
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1136px;
+    box-sizing: border-box;
+}
+
+.academic__title{
+    text-align: center;
+}
+
+.academic__courses{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.academic__courses__list{
+    display: flex;
+    flex-direction: column;
+    padding: 0
+}
+
+.academic__courses__item__img{
+    width: 300px;
+    height: 200px;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* experiência
+Seção Experiência em programação;*/
 
 section.experience{
-
+    box-sizing: border-box;
+    max-width: 1136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin: 0 auto;
 }
 
-/*Contato*/
+.experience__section__title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.experiencie__box{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+}
+
+.experience__img{
+    width: 752px;
+    height: 406px;
+    margin-bottom: 50px;
+}
+
+.experience__description{
+    display: flex;
+    gap: 16px;
+}
+
+/*Contato
+Formulário de Contato;*/
 
 section.formcontato{
-
+    background-color: var(--cor-de-fundo-destacado);
+    background-size: cover;
+    padding: 50px;
 }
 
-/*footeer*/
+.formcontato__container{
+    box-sizing: border-box;
+    max-width: 1136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin: 0 auto;
+}
+
+.formcontato__contacto{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items:start;
+}
+
+.formcontato__form{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.formcontato__input,
+.formcontato__textarea{
+    border: none;
+}
+
+/*footeer
+Rodapé.*/
 
 section.footer{
-   
+    box-sizing: border-box;
+    max-width: 1136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px;
+    margin: 0 auto;
+}
+
+.footer__rodape{
+    text-align: center;
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
