@@ -304,41 +304,130 @@ section.footer{
 utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (max-width: 980px) {
 
-/* Menu */
+    .menu__list__item{
+        display: none;
+    }
 
-/*title*/
+    .title__div{
+        flex-direction: column;
+    }
 
-/*Skills*/
+    .title__profile{
+        order: 1;
+        width: 250px;
+    }
 
-/*Hobbies*/
+    .title__container{
+        order: 2;
+    }
 
-/*Experiências acadêmicas*/
+    .title__div{
+        gap: 10px;
+    }
 
-/*Expeirência profissional*/
+    .about__paragraph{
+        font-size: 14px;
+    }
 
+    .skills__line,
+    .hobbies__line{
+        flex-wrap: wrap;
+    }
+
+    .skills__box,
+    .hobbies__box{
+        width: 224px;
+        height: 118px;
+        background-color: var(--branco);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .academic__courses__item__img{
+        width: 224px;
+        height: 118px;
+        background-color: var(--branco);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .academic__courses__item__img img{
+        width: 70px;
+        height: 48px;
+    }
+
+    section.experience{
+        box-sizing: border-box;
+        max-width: 980px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 20px;
+        margin: 0 auto;
+    }
+
+    .experiencie__box{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .experience__info{
+        order: 2;
+        margin: 0 0 30px 0;
+    }
+
+    .experience__img{
+        order: 1;
+        padding-bottom: 0px;
+    }
+
+    .formcontato__img{
+        display: none;
+    }
 }
 
-/*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 760px) {
 
-/*Menu*/
+    .title__profile{
+        width: 200px;
+    }
 
-/*Titulo*/
+    .skills__line,
+    .hobbies__line{
+        justify-content: space-evenly;
 
-/*Sessão sobre*/
+        gap: 0;
+    }
 
-/*Skills*/
+    .skills__box,
+    .hobbies__box{
+        margin: 10px;
+    }
 
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
+    .title__div{
+        gap: 15px;
+    }
 
-/*Experiência Profissional*/
+    .academic__courses{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
- /*Contato*/
+    .academic__courses__item__img{
+        height: 118px;
+        width: 296px;
+    }
 
-/*Footer*/
-
+    .experience__img{
+        max-height: 144pc;
+    }
 }
