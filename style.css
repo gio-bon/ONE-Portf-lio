@@ -11,6 +11,8 @@ coloque nas sessões indicadas*/
    --branco: white;
    --cor-destaque: #2A7AE4;
    --cor-destaque-desbotada: #5595E9;
+   --fonte: #464646;
+   --fonte-esmaecida: #868686;
 }
 
 body {
@@ -22,13 +24,23 @@ body {
     line-height: 1;
 }
 
-ol, ul,li {
+ol, ul, li {
     list-style: none;
 }
 
 a{
     text-decoration: none;
     color: var(--cor-de-link);
+}
+
+p{
+    color: var(--fonte);
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--fonte);
+    margin: 16px 0;
+    line-height: 1.25em;
 }
 
 .btn--destaque{
@@ -46,6 +58,29 @@ a{
     color: var(--brancoo);
     background-color: var(--branco);
     height: 51px;
+    width: auto;
+    padding: 12px 16px;
+    border: none;
+    color: var(--cor-destaque);
+    border: solid 1px var(--cor-destaque);
+    font-size: 16px;
+}
+
+.btn--destaque-compact{
+    color: var(--brancoo);
+    background-color: var(--cor-destaque);
+    height: 40px;
+    width: auto;
+    padding: 12px 16px;
+    border: none;
+    color: var(--branco);
+    font-size: 16px;
+}
+
+.btn--borda-compact{
+    color: var(--brancoo);
+    background-color: var(--branco);
+    height: 40px;
     width: auto;
     padding: 12px 16px;
     border: none;
@@ -78,6 +113,10 @@ section.menu{
     padding: 0;
     align-items: center;
 }
+
+.menu__list__item{
+    font-size: 14px;
+}
 /*Sessão Title
 Menu Principal;*/
 
@@ -101,8 +140,17 @@ section.title{
 /* links redes sociais */
 .title__network{
     display: flex;
-    gap: 20px;
+    gap: 40px;
     padding: 0
+}
+
+.title__bio{
+    font-size: 52px;
+}
+
+.title__subsection{
+    font-size: 22px;
+    font-weight: 300;
 }
 
 /*Sessão About
@@ -114,7 +162,7 @@ section.about{
 
 .about__container{
     box-sizing: border-box;
-    padding: 60px 20px;
+    padding: 40px 20px;
     margin: 0 auto;
     max-width: 1136px;
     box-sizing: border-box;
@@ -122,6 +170,11 @@ section.about{
 
 .about__paragraph{
     max-width: 751px;
+    font-size: 16px;
+}
+
+.about__title{
+    font-size: 32px;
 }
 /*Sessão Hobbies
 Seção Hobbies e Soft Skills*/
@@ -140,6 +193,7 @@ section.hobbies, section.skills{
 .skills__title,
 .hobbies__title{
     text-align: center;
+    font-size: 32px;
 }
 
 .skills__line,
@@ -147,6 +201,12 @@ section.hobbies, section.skills{
     display: flex;
     justify-content: space-between;
     gap: 16px;
+}
+
+.skills__name,
+.hobbies__name{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .skills__box,
@@ -186,6 +246,7 @@ section.academic{
 
 .academic__title{
     text-align: center;
+    font-size: 32px;
 }
 
 .academic__courses{
@@ -209,6 +270,15 @@ section.academic{
     align-items: center;
 }
 
+.academic__courses__item__title h4{
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.academic__courses__item__subtitle p{
+    margin: 8px 0;
+}
+
 /* experiência
 Seção Experiência em programação;*/
 
@@ -225,14 +295,22 @@ section.experience{
 .experience__section__title{
     text-align: center;
     margin-bottom: 50px;
+    font-size: 32px;
 }
 
 .experiencie__box{
     display: flex;
-    gap: 16px;
+    gap: 26px;
     justify-content: center;
     align-items: center;
-    gap:16px;
+}
+
+.experience__title h2{
+    margin: 2px 0;
+}
+
+.experience__text{
+    font-weight: 400;
 }
 
 .experience__img{
@@ -283,6 +361,42 @@ section.formcontato{
     border: none;
 }
 
+.formcontato__title{
+    font-size: 32px;
+}
+
+.formcontato__subtext{
+    margin: 4px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.formcontato__form{
+    margin: 36px 0;
+}
+
+.formcontato__input,
+.formcontato__textarea{
+    height: 56px;
+    padding: 0 16px;
+    font-size: 16px;
+}
+
+.formcontato__input:focus,
+.formcontato__textarea:focus{
+    outline: none;
+    box-shadow: inset 0 -2px 0 0 var(--cor-destaque);
+}
+
+.formcontato__input::placeholder,
+.formcontato__textarea::placeholder{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: var(--fonte-esmaecida);
+    font-size: smaller;
+}
+
 /*footeer
 Rodapé.*/
 
@@ -296,8 +410,9 @@ section.footer{
     margin: 0 auto;
 }
 
-.footer__rodape{
+.footer__rodape p{
     text-align: center;
+    margin: 6px 0;
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
@@ -362,16 +477,6 @@ utilize como referência os breakpoints @media abaixo*/
         height: 48px;
     }
 
-    section.experience{
-        box-sizing: border-box;
-        max-width: 980px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 20px 20px;
-        margin: 0 auto;
-    }
-
     .experiencie__box{
         display: flex;
         flex-direction: column;
@@ -385,7 +490,17 @@ utilize como referência os breakpoints @media abaixo*/
 
     .experience__img{
         order: 1;
-        padding-bottom: 0px;
+        margin-bottom: 8px;
+    }
+
+    .experience__title{
+        font-size: 16px;
+        margin: 6px 0;
+    }
+
+    .experience__text{
+        font-size: 14px;
+        margin: 6px 0;
     }
 
     .formcontato__img{
